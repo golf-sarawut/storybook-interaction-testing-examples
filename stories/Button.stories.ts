@@ -67,14 +67,3 @@ export const ClickByTestId: Story = {
     await button.click();
   },
 };
-
-export const DoubleClickByTestId: Story = {
-  args: {
-    label: 'Button',
-    testId: 'button',
-  },
-  play: async (context) => {
-    ClickByTestId.play(context);
-    ClickByTestId.play(context);    
-  },
-};

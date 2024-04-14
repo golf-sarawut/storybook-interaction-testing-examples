@@ -9,9 +9,7 @@ marp: true
 
 ---
 
-# Example
-
-![alt text](image-1.png)
+# Code Examples - Login Form
 
 ---
 
@@ -20,23 +18,6 @@ marp: true
 
 https://storybook.js.org/docs/writing-tests/interaction-testing#api-for-user-events
 
----
-
-# 
-
----
-
-# data-testid
-
----
-
-# Code examples - Automate clicking a button
-
-![alt text height:550px](image.png)
-
----
-
-# Reuse code in play
 
 ---
 
@@ -44,4 +25,6 @@ https://storybook.js.org/docs/writing-tests/interaction-testing#api-for-user-eve
 
 https://github.com/storybookjs/test-runner
 
----
+
+![alt text height:400px](image-3.png)
+

@@ -14,3 +14,9 @@ We install storybook interaction test follow these guideline
 
 [Next.JS Storybook nstallation](https://storybook.js.org/recipes/next)
 [Interaction test installation ](https://storybook.js.org/docs/writing-tests/interaction-testing)
+
+## Prerequisite
+
+```sh
+npx playwright install
+```

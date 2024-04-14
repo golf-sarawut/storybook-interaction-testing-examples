@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
+import { fn, within } from '@storybook/test';
 import { Button } from './Button';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
@@ -48,5 +48,33 @@ export const Small: Story = {
   args: {
     size: 'small',
     label: 'Button',
+  },
+};
+
+export const ClickByTestId: Story = {
+  args: {
+    label: 'Button',
+    testId: 'button',
+  },
+  play: async ({ canvasElement }) => {
+
+    const canvas = within(canvasElement);
+
+    // Wait for the button to appear
+    const button =  await canvas.getByTestId('button');
+
+    // Click the button
+    await button.click();
+  },
+};
+
+export const DoubleClickByTestId: Story = {
+  args: {
+    label: 'Button',
+    testId: 'button',
+  },
+  play: async (context) => {
+    ClickByTestId.play(context);
+    ClickByTestId.play(context);    
   },
 };

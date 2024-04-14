@@ -22,6 +22,9 @@ interface ButtonProps {
    * Optional click handler
    */
   onClick?: () => void;
+
+
+  testId?: string;
 }
 
 /**
@@ -32,11 +35,13 @@ export const Button = ({
   size = 'medium',
   backgroundColor,
   label,
+  testId,
   ...props
 }: ButtonProps) => {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
     <button
+      data-testid={testId}
       type="button"
       className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
       {...props}

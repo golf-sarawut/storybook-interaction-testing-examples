@@ -10,6 +10,6 @@ const meta: Meta<typeof TodoList> = {
 export default meta;
 type Story = StoryObj<typeof TodoList>;
 
-export const EmptyForm: Story = {};
+export const Empty: Story = {};
 
 

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import TodoList from "./TodoList";
+import { TodoList } from "./TodoList";
 
 const meta: Meta<typeof TodoList> = {
   title: "Exercise/TodoList",

@@ -7,7 +7,7 @@ interface Task {
   completed: boolean;
 }
 
-const TodoList: React.FC = () => {
+export const TodoList: React.FC = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [newTask, setNewTask] = useState<string>('');
 
@@ -20,6 +20,12 @@ const TodoList: React.FC = () => {
       };
       setTasks([...tasks, newTaskItem]);
       setNewTask('');
+    }
+  };
+
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>): void => {
+    if (event.key === 'Enter') {
+      addTask();
     }
   };
 
@@ -41,6 +47,7 @@ const TodoList: React.FC = () => {
         type="text"
         value={newTask}
         onChange={(e) => setNewTask(e.target.value)}
+        onKeyDown={handleKeyDown}
         placeholder="Add a new task..."
         className="todo-input"
       />
@@ -65,5 +72,3 @@ const TodoList: React.FC = () => {
     </div>
   );
 };
-
-export default TodoList;
